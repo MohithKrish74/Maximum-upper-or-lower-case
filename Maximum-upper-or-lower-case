@@ -1,0 +1,30 @@
+package com.company;
+
+import java.util.*;
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        System.out.print("Enter the String: ");
+        Scanner in =new Scanner(System.in);
+        String string =in.nextLine();
+        char char_array[]=new char[string.length()];
+        int Uppercase=0,Lowercase=0;
+        for(int i=0;i<string.length();i++)
+            char_array[i]=string.charAt(i);
+        System.out.println("User Array: "+Arrays.toString(char_array));
+        for(int i=0;i<char_array.length;i++)
+        {
+            if(char_array[i]>=65 && char_array[i]<=90)
+                Uppercase++;
+            else
+                Lowercase++;
+
+        }
+        System.out.println((Uppercase>Lowercase)?"String has maximum Uppercase!!!":"String has maximum Lowercase!!!");
+
+
+    }
+
+}
